@@ -7,53 +7,54 @@ const Footer = () => {
       <div className="container">
         <div className="footer__links">
           <div className="footer__row">
-            <a href="#" className="footer__link">
+            <a href="/" className="footer__link">
               Home
             </a>
-            <a href="#" className="footer__link">
+            <a href="/about" className="footer__link">
               About
             </a>
-            <a href="#" className="footer__link">
+            <a href="/menu" className="footer__link">
               Menu
             </a>
-            <a href="#" className="footer__link">
+            <a href="/info" className="footer__link">
               Info
             </a>
-            <a href="#" className="footer__link">
+            <a href="/contact" className="footer__link">
               Contact
             </a>
-            <a href="#" className="footer__link">
+            <a href="/bookings" className="footer__link">
               Bookings
             </a>
-            <a href="#" className="footer__link">
+            <a href="/privacy" className="footer__link">
               Privacy Policy
             </a>
           </div>
           <div className="footer__row">
-            <a href="#" className="footer__link">
+            <a href="/style-guide" className="footer__link">
               Style Guide
             </a>
-            <a href="#" className="footer__link">
+            <a href="/licenses" className="footer__link">
               Licenses
             </a>
-            <a href="#" className="footer__link">
+            <a href="/instructions" className="footer__link">
               Instructions
             </a>
-            <a href="#" className="footer__link">
+            <a href="/changelog" className="footer__link">
               Changelog
             </a>
-            <a href="#" className="footer__link">
+            <a href="/password" className="footer__link">
               Password
             </a>
-            <a href="#" className="footer__link">
+            <a href="/404" className="footer__link">
               404
             </a>
           </div>
         </div>
         <div className="footer__bottom">
-          <p className="footer__copyright">© Latte Cafe 2022.</p>
+          <p className="footer__copyright">© Latte Cafe 2023.</p>
           <p className="footer__credits">
-            Built by Nikolai Bain. Powered by Webflow.
+            Built by <span className="footer__developer">Iusif Mamedov</span>.
+            Powered by Webflow.
           </p>
         </div>
       </div>

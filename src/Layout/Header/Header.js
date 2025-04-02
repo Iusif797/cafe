@@ -1,7 +1,4 @@
 import React from "react";
-import { HiOutlineMail } from "react-icons/hi";
-import { IoLogoFacebook } from "react-icons/io";
-import { RiInstagramLine } from "react-icons/ri";
 import "./Header.scss";
 
 const Header = () => {
@@ -9,24 +6,54 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <nav className="header__nav">
-          <ul className="header__list">
-            <li className="header__item">About</li>
-            <li className="header__item">Menu</li>
-            <li className="header__item">Info</li>
-            <li className="header__item">Booking</li>
+          <ul className="header__menu">
+            <li className="header__menu-item">
+              <a href="/about" className="header__menu-link">
+                About
+              </a>
+            </li>
+            <li className="header__menu-item">
+              <a href="/menu" className="header__menu-link">
+                Menu
+              </a>
+            </li>
+            <li className="header__menu-item">
+              <a href="/info" className="header__menu-link">
+                Info
+              </a>
+            </li>
+            <li className="header__menu-item">
+              <a href="/booking" className="header__menu-link">
+                Booking
+              </a>
+            </li>
           </ul>
-          <h1 className="header__title">LATTE CAFE</h1>
-          <ul className="header__list">
-            <li className="header__item header__item-icon">
-              <HiOutlineMail />
-            </li>
-            <li className="header__item header__item-icon">
-              <IoLogoFacebook />
-            </li>
-            <li className="header__item header__item-icon">
-              <RiInstagramLine />
-            </li>
-          </ul>
+
+          <a href="/" className="header__logo">
+            LATTE CAFE
+          </a>
+
+          <div className="header__social">
+            <a href="mailto:info@example.com" className="header__social-link">
+              <i className="far fa-envelope"></i>
+            </a>
+            <a
+              href="https://facebook.com"
+              className="header__social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://instagram.com"
+              className="header__social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
         </nav>
       </div>
     </header>
