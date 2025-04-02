@@ -1,85 +1,101 @@
 .footer {
-  background-color: #4a2b33;
-  padding: 30px 0;
-  border-top: 1px solid rgba(210, 116, 135, 0.2);
-  
-  &__container {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 20px;
+  background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
   }
 
-  &__content {
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
   }
 
   &__developer {
-    text-align: center;
-    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
     position: relative;
-    
-    &::before {
+    padding: 0.5rem 0;
+
+    &::after {
       content: '';
       position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(210, 116, 135, 0.3), transparent);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+      );
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
     }
 
-    &-text {
-      font-family: 'Playfair Display', serif;
-      color: #D27487;
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      line-height: 1.5;
-      opacity: 0.9;
-      transition: all 0.5s ease;
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
 
-      span {
-        display: block;
-        font-size: 14px;
-        margin-top: 5px;
-        font-family: 'Inter', sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
+  &__developer-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+  }
 
-      a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-        position: relative;
-        transition: all 0.3s ease;
-        padding: 0 5px;
+  &__developer-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+    position: relative;
 
-        &::before {
-          content: '';
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 100%;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, #fff, transparent);
-          transform: scaleX(0);
-          transform-origin: center;
-          transition: transform 0.5s ease;
-        }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #fff, transparent);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
 
-        &:hover {
-          color: #fff;
-          text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-
-          &::before {
-            transform: scaleX(1);
-          }
-        }
+    &:hover {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      
+      &::after {
+        transform: scaleX(1);
       }
     }
   }
@@ -108,38 +124,25 @@
   }
 
   @media (max-width: 768px) {
-    padding: 25px 0;
+    padding: 1.5rem 0;
 
-    &__content {
+    &__container {
       flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 30px;
+      gap: 1rem;
+      text-align: center;
     }
 
     &__developer {
-      padding: 25px 0;
-
-      &-text {
-        font-size: 16px;
-
-        span {
-          font-size: 12px;
-          margin-top: 4px;
-        }
-      }
+      flex-direction: column;
+      gap: 0.3rem;
     }
 
-    &__row {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
+    &__developer-text {
+      font-size: 0.8rem;
     }
 
-    &__bottom {
-      flex-direction: column;
-      gap: 12px;
-      text-align: center;
+    &__developer-name {
+      font-size: 1rem;
     }
   }
 
