@@ -1,0 +1,243 @@
+.menu {
+  padding: 120px 0;
+  background-color: #F5F5F5;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 400;
+    color: #2E2E2E;
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #2E2E2E;
+    opacity: 0.7;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  &__left {
+    flex: 0 0 300px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 30px;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: 1px solid #2E2E2E;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+
+    &--active {
+      background: #2E2E2E;
+      color: white;
+    }
+
+    &:hover {
+      background: #2E2E2E;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__right {
+    flex: 1;
+    border-left: 1px solid rgba(46, 46, 46, 0.1);
+    padding-left: 60px;
+  }
+
+  &__cafe-title {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__section {
+    margin-bottom: 60px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -20px;
+      width: 40px;
+      height: 1px;
+      background-color: #2E2E2E;
+      opacity: 0.3;
+    }
+  }
+
+  &__section-title {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgba(46, 46, 46, 0.1);
+    transition: transform 0.3s ease;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__item-title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__item-price {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #F5F5F5;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  &__item-description {
+    font-size: 14px;
+    color: #2E2E2E;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 1200px) {
+    &__content {
+      gap: 60px;
+    }
+
+    &__right {
+      padding-left: 40px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 80px 0;
+
+    &__header {
+      margin-bottom: 40px;
+    }
+
+    &__content {
+      gap: 40px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+
+    &__left {
+      flex: 0 0 250px;
+    }
+
+    &__right {
+      padding-left: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
+    &__content {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    &__left {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    &__right {
+      border-left: none;
+      padding-left: 0;
+      border-top: 1px solid rgba(46, 46, 46, 0.1);
+      padding-top: 40px;
+    }
+
+    &__description {
+      font-size: 18px;
+    }
+
+    &__cafe-title {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 40px 0;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    &__section {
+      margin-bottom: 40px;
+    }
+
+    &__section-title {
+      margin-bottom: 20px;
+    }
+
+    &__item-header {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    &__item-price {
+      margin-top: 8px;
+    }
+  }
+} 

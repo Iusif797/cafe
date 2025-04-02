@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// Media queries
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+// Component imports
+@import './Layout/Header/Header.scss';
+@import './Layout/Footer/Footer.scss';
+@import "Pages/Home/Home.scss";
+@import "Pages/About/About.scss";
+@import "Pages/Menu/Menu.scss";
+@import "Pages/Food/food";
+@import "Pages/Info/Info.scss";
+@import "Pages/Gallery/Gallery.scss";
+@import "Pages/Award/Award.scss";

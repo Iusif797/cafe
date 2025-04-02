@@ -1,0 +1,37 @@
+.food{
+   padding: 120px 0; 
+   background-color: #E9E9E3;
+
+   &__title{
+    font-family: 'Azeret Mono', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #6F6F64;
+   }
+
+   &__info {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 45px;
+    color: #6F6F64;
+    margin: 40px 0;
+   }
+   &__btn{
+    background: #6F6F64;
+    border: 2px solid #6F6F64;
+    width: 531px;
+    height: 58px; 
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+   }
+}
