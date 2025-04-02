@@ -7,14 +7,17 @@ const Footer = () => {
       <div className="footer__container">
         <div className="footer__developer">
           <p className="footer__developer-text">
-            Designed & Developed with ❤️ by{" "}
-            <a
-              href="https://github.com/IusifMamedov"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Iusif Mamedov
-            </a>
+            Crafted with passion and precision
+            <span>
+              Designed & Developed by{" "}
+              <a
+                href="https://github.com/Iusif797"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Iusif Mamedov
+              </a>
+            </span>
           </p>
         </div>
       </div>
